@@ -4,14 +4,6 @@ pSlider, a very simple image slider by pman
 (function($){
 	$.fn.pslider = function( option ) {
 	
-		option = $.extend( {}, $.fn.pslider.option, option );
-		
-		// опции по умолчанию
-		$.fn.pslider.option = {
-			width: 600,
-			height:300
-		};
-		
 		//Базовый функционал - определяет контейнер, выравнивает его по центру и считает количество элементов внутри
 		return this.each(function(){
 		
