@@ -1,0 +1,50 @@
+.pSliderPane{
+	overflow:hidden;
+}
+
+.pSliderPane img{
+	float:left;
+}
+
+/*.pSliderPane img{
+	position:absolute;
+	z-index:997;
+}
+
+.pSliderPane img.old{
+	position:relative;
+	float:left;
+	z-index:998;
+}*/
+
+.pSlider{
+	overflow:hidden;
+}
+
+.pSlider a{
+	position: absolute;
+	display:block;
+	top: 50%;
+	left: 15px;
+	width: 24px;
+	height: 24px;
+	margin-top: -12px;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	z-index:999;
+}
+
+.pSlider a.next{
+	right: 15px;
+	left: auto;
+	background: url('../img/next.png');
+}
+
+.pSlider a.prev{
+	background: url('../img/previous.png');
+}
+
+.pSlider a:hover{
+	opacity:1;
+	filter: alpha(opacity=100);
+}
