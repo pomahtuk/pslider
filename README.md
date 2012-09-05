@@ -16,12 +16,12 @@ pSlider - слайдер в качестве тестового задания
 HTML-разметка:
 --------------
   		<div id="pSlider">
-				<ul>
-					<li><img src="http://placehold.it/600x300/666666"></li>
-					<li><img src="http://placehold.it/600x300/ffffff"></li>
-					<li><img src="http://placehold.it/600x300/000000"></li>
-				</ul>
-			</div>							
+			<ul>
+				<li><img src="http://placehold.it/600x300/666666"></li>
+				<li><img src="http://placehold.it/600x300/ffffff"></li>
+				<li><img src="http://placehold.it/600x300/000000"></li>
+			</ul>
+		</div>							
 	
 JavaScript:
 -----------
