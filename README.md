@@ -10,7 +10,7 @@ pSlider - слайдер в качестве тестового задания
     <link type="text/css" rel="stylesheet" href="css/pslider.css">							
     <!--библиотека jQuery с Google CDN -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-    <!-- Скрипт слайдера --&gt;
+    <!-- Скрипт слайдера -->
     <script src="js/pslider.js"></script>;
 							
 HTML-разметка:
