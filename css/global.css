@@ -36,8 +36,7 @@ body{
 }
 
 #pSlider{
-	/*margin: 0 auto;*/
-	overflow:hidden;
+	margin: 0 auto;
 	margin-bottom:20px;
 }
 
