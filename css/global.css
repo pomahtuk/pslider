@@ -17,6 +17,7 @@ body{
 	padding:20px;
 	-webkit-box-shadow:  1px 1px 5px #666666;        
 	box-shadow:  1px 1px 5px #666666;	
+	overflow:hidden;
 }
 
 #wrapper header{
@@ -35,8 +36,8 @@ body{
 }
 
 #pSlider{
-	margin: 0 auto;
-	background:#333;
+	/*margin: 0 auto;*/
+	overflow:hidden;
 	margin-bottom:20px;
 }
 

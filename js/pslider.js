@@ -30,7 +30,6 @@ pSlider, a very simple image slider by pman
 			
 			var container = $('.pSliderPane');
 			
-			container.css({'width':option.width*2});
 			
 			if (total >= 2) {
 				$(this).append('<a href="#" class="next"></a>');
@@ -41,13 +40,14 @@ pSlider, a very simple image slider by pman
 					current = current === total-1? 0: current+1;
 					
 					container.children('img').addClass('old');
+					container.css({'width':option.width*2});
 					container.append('<img src="'+$(items.get(current)).children("img").attr("src")+'">');
 					$('.pSliderPane').css({'margin-left':'0'});
 					$('.pSliderPane').animate({
 						'margin-left': '-'+option.width 
 					}, 1000, function() {
 						$('.pSliderPane img.old').remove();
-						$('.pSliderPane').css({'margin-left':'0'});
+						container.css({'margin-left':'0', 'width':option.width});
 					});	
 					
 					return false;
@@ -57,13 +57,14 @@ pSlider, a very simple image slider by pman
 					current = current === 0? total-1: current-1;
 																					
 					container.children('img').addClass('old');
+					container.css({'width':option.width*2});
 					container.prepend('<img src="'+$(items.get(current)).children("img").attr("src")+'" >');
 					$('.pSliderPane').css({'margin-left':-option.width});
 					$('.pSliderPane').animate({
 						'margin-left': 0 
 					}, 1000, function() {
 						$('.pSliderPane img.old').remove();
-						//$('.pSliderPane').css({'margin-left':'0'});
+						container.css({'margin-left':'0', 'width':option.width});
 					});
 					
 					return false;
