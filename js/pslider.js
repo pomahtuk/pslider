@@ -31,12 +31,10 @@ pSlider, a very simple image slider by pman
 				$(this).append('<a href="#" class="next"></a>'); //добавляем кнопки переключения слайдов
 				$(this).prepend('<a href="#" class="prev"></a>'); 
 				container.append('<img src="'+$(items.get(0)).children("img").attr("src")+'">');//и первичный слайд
-				
-				var animating = false; //переменная для флага анимации
-				
+							
 				$('.pSlider a.next').click(function(){ //добавляем обработчик для кнопки "Далее"
 					current = current === total-1? 0: current+1; //вычисляем изображение для показа
-					animating = true;//указываем, что начали анимацию и на панели первой стоит картинка, отличная от текущей
+					$('.pSliderPane img.old').remove();//убираем старое изображение	на всякий случай
 					container.children('img').addClass('old'); //помечаем старое изображение классом old
 					container.append('<img src="'+$(items.get(current)).children("img").attr("src")+'">');//добавляем следующее на панель после старого
 					$('.pSliderPane').css({'margin-left':'0'});//на всякий случай сбрасываем положение панели
@@ -45,26 +43,15 @@ pSlider, a very simple image slider by pman
 					}, 1000, function() {//после анимации, длиной в секунду
 						$('.pSliderPane img.old').remove(); //удаляем старое изображение
 						container.css({'margin-left':'0'}); //возвращаем панель на место
-						animating = false;//закончили анимацию, всё в номре.
+						//animating = false;//закончили анимацию, всё в номре.
 					});	
 					
 					return false; //предотвращаем дефолтное поведение ссылки
 				})
 				
 				$('.pSlider a.prev').click(function(){ //обработчик события "Назад"
-					if  (animating) {//если успели кликнуть в момент промотки вперйд
-						if (current === 0) { //если текущее изображение уже нулевое, отсчитываем второе с конца
-							current = total-2;
-						} else if (current === 1) {//если же изображение первое, то берём первое с конца
-							current = total-1;
-						} else {//ну или просто отматываем на два назад
-							current -= 2;
-						}
-						animating = false;//и сбрасываем флаг анимации
-					} else { //ну а если всё штатно
-						current = current === 0? total-1: current-1; //вычисляем, какой изображение показывать
-					}
-																
+					current = current === 0? total-1: current-1; //вычисляем, какой изображение показывать
+					$('.pSliderPane img.old').remove();//убираем старое изображение	на всякий случай										
 					container.children('img').addClass('old'); //маркируем старое изображение
 					container.prepend('<img src="'+$(items.get(current)).children("img").attr("src")+'" >');//добавляем новое до старого
 					$('.pSliderPane').css({'margin-left':-option.width});//сдвигаем панель на исходную
