@@ -29,7 +29,7 @@ pSlider, a very simple image slider by pman
 			
 			if (total >= 2) {//если есть, что переключать
 				$(this).append('<a href="#" class="next"></a>'); //добавляем кнопки переключения слайдов
-				$(this).prepend('<a href="#" class="prev"></a>');
+				$(this).prepend('<a href="#" class="prev"></a>'); 
 				container.append('<img src="'+$(items.get(0)).children("img").attr("src")+'">');//и первичный слайд
 				
 				$('.pSlider a.next').click(function(){ //добавляем обработчик для кнопки "Далее"
