@@ -17,9 +17,10 @@ HTML-разметка:
 --------------
   		<div id="pSlider">
 			<ul>
-				<li><img src="http://placehold.it/600x300/666666"></li>
-				<li><img src="http://placehold.it/600x300/ffffff"></li>
-				<li><img src="http://placehold.it/600x300/000000"></li>
+				<li><img src="img/1.jpg"></li>
+				<li><img src="img/2.jpg"></li>
+				<li><img src="img/3.jpg"></li>
+				<li><img src="img/4.jpg"></li>
 			</ul>
 		</div>							
 	
