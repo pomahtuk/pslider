@@ -44,7 +44,7 @@ pSlider, a very simple image slider by pman
 						$('.pSliderPane').css({'margin-left':'0'});//на всякий случай сбрасываем положение панели
 						$('.pSliderPane').animate({ //анимированно сдвигаем панель на ширину слайдера влево, тем самым уводя из обзора старую картинку и показывая новую
 							'margin-left': '-='+option.width 
-						}, 1000, function() {//после анимации, длиной в секунду
+						}, 500, function() {//после анимации, длиной в секунду
 							$('.pSliderPane img.old').remove(); //удаляем старое изображение
 							container.css({'margin-left':'0'}); //возвращаем панель на место
 							animating = false;//закончили анимацию, всё в номре.
@@ -64,7 +64,7 @@ pSlider, a very simple image slider by pman
 						$('.pSliderPane').css({'margin-left':-option.width});//сдвигаем панель на исходную
 						$('.pSliderPane').animate({//двигаем до нуля
 							'margin-left': '+='+option.width
-						}, 1000, function() {//а после секундной анимации
+						}, 500, function() {//а после секундной анимации
 							$('.pSliderPane img.old').remove();//убираем старое изображение
 							//container.css({'margin-left':'0'});
 							animating = false;//закончили анимацию, всё в номре.
